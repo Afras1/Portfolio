@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afra Syed | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Afra Syed</h1>
+    <p>Marketing • Design • Videography</p>
+  </header>
+
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>
+      I’m <strong>Afra Syed</strong>, a creative professional with over three years of experience in the marketing field.
+      My expertise spans across <strong>graphic design, video editing, content creation, and campaign management</strong>.
+      I design visuals using <strong>Canva</strong>, edit videos with precision and color grading using <strong>CapCut</strong>,
+      and am currently advancing my skills in <strong>DaVinci Resolve</strong> to produce cinematic, story-driven videos.
+    </p>
+    <p>
+      I’m deeply involved in <strong>videography</strong> — capturing content hands-on as the camera operator,
+      blending storytelling and trends to align creative direction with brand identity. 
+      I craft engaging <strong>scripts, SEO-optimized captions, and content calendars</strong> tailored for social media algorithms.
+      My experience also includes <strong>Meta campaign creation, scheduling, and email marketing</strong>,
+      helping brands narrate their story effectively and connect emotionally with their audience.
+    </p>
+  </section>
+
+  <section id="bts" class="fade-in">
+    <h2>Behind the Scenes</h2>
+    <div class="video-container">
+      <video src="videos/bts.mp4" autoplay muted loop playsinline></video>
+      <p>
+        A glimpse of me behind the camera, capturing brand stories with the <strong>Samsung S25 Ultra</strong>.
+        Every frame is planned to blend creativity and storytelling—whether it’s a cinematic product shoot or a trend-based reel.
+      </p>
+    </div>
+  </section>
+
+  <section id="graphics" class="fade-in">
+    <h2>Graphic Design Gallery</h2>
+    <div class="gallery">
+      <!-- Add your 19 photos below -->
+      <img src="images/post1.jpg" alt="50% off poster">
+      <img src="images/post2.jpg" alt="Ad campaign poster">
+      <img src="images/post3.jpg" alt="AD poster">
+      <img src="images/post4.jpg" alt="Banner Design">
+      <img src="images/post5.jpg" alt="Challenge Design">
+      <img src="images/post6.jpg" alt="Event Announcement Design">
+      <img src="images/post7.jpg" alt="Creative Product Design">
+      <img src="images/post8.jpg" alt="Halloween Design">
+      <img src="images/post9.jpg" alt="Offer Poster Design">
+      <img src="images/post10.jpg" alt="Multiple Product Poster">
+      <img src="images/post11.jpg" alt="Offer Poster Design">
+      <img src="images/post12.jpg" alt="Price Drop Design">
+      <img src="images/post13.jpg" alt="Price Drop Design 2">
+      <img src="images/post14.jpg" alt="Product Price Design">
+      <img src="images/post15.jpg" alt="Promo Poster Design">
+      <img src="images/post16.jpg" alt="Shelf Display Design">
+      <img src="images/post17.jpg" alt="Sony Flash Sale Design">
+      <img src="images/post18.jpg" alt="Restaurant Pamphlet Design (1080x1920)">
+      <img src="images/post19.jpg" alt="Voucher Design (1920x1080)">
+    </div>
+  </section>
+
+  <section id="videos" class="fade-in">
+    <h2>Video Portfolio</h2>
+    <p>
+      All videos here are scripted, filmed, and creatively directed by me.
+      I conceptualize content by connecting brand goals with trending narratives,
+      continuously enhancing my craft through <strong>DaVinci Resolve</strong> for advanced color grading and motion design.
+    </p>
+    <div class="video-gallery">
+      <!-- Add your 16 videos below -->
+      <video src="videos/video1.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video2.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video3.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video4.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video5.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video6.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video7.mov" autoplay muted loop playsinline></video>
+      <video src="videos/video8.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video9.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video10.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video11.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video12.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video13.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video14.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video15.mp4" autoplay muted loop playsinline></video>
+      <video src="videos/video16.mp4" autoplay muted loop playsinline></video>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Afra Syed | Portfolio</p>
+  </footer>
+
+  <script>
+    // Fade/Slide animation on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+      entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+
+    // Unmute and fullscreen on hover
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+      video.addEventListener('mouseenter', () => {
+        video.controls = true;
+      });
+      video.addEventListener('mouseleave', () => {
+        video.controls = false;
+      });
+    });
+  </script>
+</body>
+</html>
