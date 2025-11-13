@@ -181,29 +181,44 @@ h2{
 .unmute-btn:hover, .fullscreen-btn:hover{ transform:scale(1.06) }
 
 /* ===== BRANDS GRID ===== */
-.brands-grid{
-  display:flex;
-  gap:22px;
-  justify-content:center;
-  align-items:center;
-  margin-top:22px;
-  flex-wrap:wrap;
+/* Brand grid container */
+.brands-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* space between brand logos */
+  flex-wrap: wrap;
+  margin: 2rem 0;
 }
-.brand-card{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  padding:10px 14px;
-  border-radius:12px;
-  min-width:140px;
-  justify-content:center;
-  flex-direction:column;
-  color:#ddd;
-  box-shadow:0 10px 30px rgba(0,0,0,0.55);
+
+/* Individual brand card */
+.brand-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000; /* black background optional */
+  padding: 1rem; 
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15); /* gold shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.brand-card img{ max-width:90px; height:auto; display:block; filter:grayscale(0.05) brightness(1.05) }
-.brand-card span{margin-top:8px;font-weight:600;color:#eee;font-size:0.92rem}
+
+.brand-card:hover {
+  transform: scale(1.1); /* zoom effect on hover */
+  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.25);
+}
+
+/* Brand images */
+.brand-card img {
+  width: 120px; /* bigger logo size */
+  height: auto; /* keep aspect ratio */
+  object-fit: contain;
+}
+.brand-card img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
 
 /* ===== FOOTER ===== */
 footer{
@@ -231,5 +246,6 @@ footer{
 
 /* accessibility focus */
 a:focus, button:focus { outline: 2px dashed var(--gold); outline-offset:4px }
+
 
 
