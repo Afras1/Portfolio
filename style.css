@@ -101,7 +101,7 @@ h2{
   transition:transform .45s ease, box-shadow .45s ease;
   aspect-ratio:9/16; /* vertical default */
 }
-.video-container.wide{ aspect-ratio:16/9 } /* for wide BTS */
+.video-container.wide{ aspect-ratio:9/16 } /* for wide BTS */
 
 .video-container iframe,
 .video-container video{
@@ -196,3 +196,4 @@ footer{
 
 /* accessibility focus */
 a:focus, button:focus { outline: 2px dashed var(--gold); outline-offset:4px }
+
